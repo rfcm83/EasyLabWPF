@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyLabWPF", "EasyLabWPF\EasyLabWPF.csproj", "{B60CB1C8-AB58-4029-84AC-69F8F411DF6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyLabWPF.Web", "EasyLabWPF.Web\EasyLabWPF.Web.csproj", "{6D5110BA-851F-4874-B2EC-CFE594FC3BBF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Web Services", "2. Web Services", "{BDF62150-FB56-402C-B3A1-5B95B286986C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Client", "1. Client", "{01CEA06B-43CB-4EB9-A243-50BAF2426D5F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Infrastructure", "3. Infrastructure", "{749308BC-C892-4F16-A64C-D8D54F536779}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyLabWPF.Infrastructure", "EasyLabWPF.Infrastructure\EasyLabWPF.Infrastructure.csproj", "{BF1C129F-FB63-4B08-B5AE-DD5FCD90AB74}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyLabWPF.Proxy", "EasyLabWPF.Proxy\EasyLabWPF.Proxy.csproj", "{5488ABAC-87BE-4C54-BB21-E26A47084612}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6D5110BA-851F-4874-B2EC-CFE594FC3BBF} = {6D5110BA-851F-4874-B2EC-CFE594FC3BBF}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B60CB1C8-AB58-4029-84AC-69F8F411DF6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B60CB1C8-AB58-4029-84AC-69F8F411DF6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B60CB1C8-AB58-4029-84AC-69F8F411DF6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B60CB1C8-AB58-4029-84AC-69F8F411DF6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D5110BA-851F-4874-B2EC-CFE594FC3BBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D5110BA-851F-4874-B2EC-CFE594FC3BBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D5110BA-851F-4874-B2EC-CFE594FC3BBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D5110BA-851F-4874-B2EC-CFE594FC3BBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF1C129F-FB63-4B08-B5AE-DD5FCD90AB74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF1C129F-FB63-4B08-B5AE-DD5FCD90AB74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF1C129F-FB63-4B08-B5AE-DD5FCD90AB74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF1C129F-FB63-4B08-B5AE-DD5FCD90AB74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5488ABAC-87BE-4C54-BB21-E26A47084612}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5488ABAC-87BE-4C54-BB21-E26A47084612}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5488ABAC-87BE-4C54-BB21-E26A47084612}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5488ABAC-87BE-4C54-BB21-E26A47084612}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B60CB1C8-AB58-4029-84AC-69F8F411DF6B} = {01CEA06B-43CB-4EB9-A243-50BAF2426D5F}
+		{6D5110BA-851F-4874-B2EC-CFE594FC3BBF} = {BDF62150-FB56-402C-B3A1-5B95B286986C}
+		{BF1C129F-FB63-4B08-B5AE-DD5FCD90AB74} = {749308BC-C892-4F16-A64C-D8D54F536779}
+		{5488ABAC-87BE-4C54-BB21-E26A47084612} = {01CEA06B-43CB-4EB9-A243-50BAF2426D5F}
+	EndGlobalSection
+EndGlobal
