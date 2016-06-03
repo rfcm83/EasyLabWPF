@@ -11,7 +11,8 @@ namespace EasyLabWPF.Infrastructure
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Runtime.Serialization;
+    [DataContract(IsReference = true)]
     public partial class Region
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -20,10 +21,13 @@ namespace EasyLabWPF.Infrastructure
             this.Territories = new HashSet<Territory>();
         }
     
-        public int RegionID { get; set; }
-        public string RegionDescription { get; set; }
+        [DataMember]
+		public int RegionID { get; set; }
+        [DataMember]
+		public string RegionDescription { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Territory> Territories { get; set; }
+        [DataMember]
+		public virtual ICollection<Territory> Territories { get; set; }
     }
 }

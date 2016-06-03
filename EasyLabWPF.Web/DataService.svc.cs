@@ -22,7 +22,7 @@ namespace EasyLabWPF.Web
             {
                 using(var context = CreateContext())
                 {
-                    return context.Products.ToList();
+                    return context.Products.Include("Category").ToList();
                 }
             }
             catch (Exception ex)

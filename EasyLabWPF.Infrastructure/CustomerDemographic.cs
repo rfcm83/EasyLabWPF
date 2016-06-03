@@ -11,7 +11,8 @@ namespace EasyLabWPF.Infrastructure
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Runtime.Serialization;
+    [DataContract(IsReference = true)]
     public partial class CustomerDemographic
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -20,10 +21,13 @@ namespace EasyLabWPF.Infrastructure
             this.Customers = new HashSet<Customer>();
         }
     
-        public string CustomerTypeID { get; set; }
-        public string CustomerDesc { get; set; }
+        [DataMember]
+		public string CustomerTypeID { get; set; }
+        [DataMember]
+		public string CustomerDesc { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Customer> Customers { get; set; }
+        [DataMember]
+		public virtual ICollection<Customer> Customers { get; set; }
     }
 }

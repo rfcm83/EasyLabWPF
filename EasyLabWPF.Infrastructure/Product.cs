@@ -11,7 +11,8 @@ namespace EasyLabWPF.Infrastructure
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Runtime.Serialization;
+    [DataContract(IsReference = true)]
     public partial class Product
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -20,20 +21,33 @@ namespace EasyLabWPF.Infrastructure
             this.Order_Details = new HashSet<Order_Detail>();
         }
     
-        public int ProductID { get; set; }
-        public string ProductName { get; set; }
-        public Nullable<int> SupplierID { get; set; }
-        public Nullable<int> CategoryID { get; set; }
-        public string QuantityPerUnit { get; set; }
-        public Nullable<decimal> UnitPrice { get; set; }
-        public Nullable<short> UnitsInStock { get; set; }
-        public Nullable<short> UnitsOnOrder { get; set; }
-        public Nullable<short> ReorderLevel { get; set; }
-        public bool Discontinued { get; set; }
+        [DataMember]
+		public int ProductID { get; set; }
+        [DataMember]
+		public string ProductName { get; set; }
+        [DataMember]
+		public Nullable<int> SupplierID { get; set; }
+        [DataMember]
+		public Nullable<int> CategoryID { get; set; }
+        [DataMember]
+		public string QuantityPerUnit { get; set; }
+        [DataMember]
+		public Nullable<decimal> UnitPrice { get; set; }
+        [DataMember]
+		public Nullable<short> UnitsInStock { get; set; }
+        [DataMember]
+		public Nullable<short> UnitsOnOrder { get; set; }
+        [DataMember]
+		public Nullable<short> ReorderLevel { get; set; }
+        [DataMember]
+		public bool Discontinued { get; set; }
     
-        public virtual Category Category { get; set; }
+        [DataMember]
+		public virtual Category Category { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Order_Detail> Order_Details { get; set; }
-        public virtual Supplier Supplier { get; set; }
+        [DataMember]
+		public virtual ICollection<Order_Detail> Order_Details { get; set; }
+        [DataMember]
+		public virtual Supplier Supplier { get; set; }
     }
 }

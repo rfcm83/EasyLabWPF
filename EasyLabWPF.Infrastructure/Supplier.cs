@@ -11,7 +11,8 @@ namespace EasyLabWPF.Infrastructure
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Runtime.Serialization;
+    [DataContract(IsReference = true)]
     public partial class Supplier
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -20,20 +21,33 @@ namespace EasyLabWPF.Infrastructure
             this.Products = new HashSet<Product>();
         }
     
-        public int SupplierID { get; set; }
-        public string CompanyName { get; set; }
-        public string ContactName { get; set; }
-        public string ContactTitle { get; set; }
-        public string Address { get; set; }
-        public string City { get; set; }
-        public string Region { get; set; }
-        public string PostalCode { get; set; }
-        public string Country { get; set; }
-        public string Phone { get; set; }
-        public string Fax { get; set; }
-        public string HomePage { get; set; }
+        [DataMember]
+		public int SupplierID { get; set; }
+        [DataMember]
+		public string CompanyName { get; set; }
+        [DataMember]
+		public string ContactName { get; set; }
+        [DataMember]
+		public string ContactTitle { get; set; }
+        [DataMember]
+		public string Address { get; set; }
+        [DataMember]
+		public string City { get; set; }
+        [DataMember]
+		public string Region { get; set; }
+        [DataMember]
+		public string PostalCode { get; set; }
+        [DataMember]
+		public string Country { get; set; }
+        [DataMember]
+		public string Phone { get; set; }
+        [DataMember]
+		public string Fax { get; set; }
+        [DataMember]
+		public string HomePage { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Product> Products { get; set; }
+        [DataMember]
+		public virtual ICollection<Product> Products { get; set; }
     }
 }

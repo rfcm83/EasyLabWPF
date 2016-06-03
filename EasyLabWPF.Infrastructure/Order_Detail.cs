@@ -11,16 +11,24 @@ namespace EasyLabWPF.Infrastructure
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Runtime.Serialization;
+    [DataContract(IsReference = true)]
     public partial class Order_Detail
     {
-        public int OrderID { get; set; }
-        public int ProductID { get; set; }
-        public decimal UnitPrice { get; set; }
-        public short Quantity { get; set; }
-        public float Discount { get; set; }
+        [DataMember]
+		public int OrderID { get; set; }
+        [DataMember]
+		public int ProductID { get; set; }
+        [DataMember]
+		public decimal UnitPrice { get; set; }
+        [DataMember]
+		public short Quantity { get; set; }
+        [DataMember]
+		public float Discount { get; set; }
     
-        public virtual Order Order { get; set; }
-        public virtual Product Product { get; set; }
+        [DataMember]
+		public virtual Order Order { get; set; }
+        [DataMember]
+		public virtual Product Product { get; set; }
     }
 }
